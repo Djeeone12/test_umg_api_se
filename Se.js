@@ -1,8 +1,12 @@
 const express = require('express');
 const morgan =require('morgan');
 const axios = require('axios');
-
+//Usingpackages 
 const app = express();
+
+
+// create Port for Heroku
+let port = process.env.PORT||8080
 
 // Middleware to read json objs
 app.use(express.json()) 
@@ -60,6 +64,6 @@ app.get('/rick/:id',(req,res) => {
 })
 
 // Listen Server
-app.listen(4000, () => {
-    console.log("Server running on port 4000");
+app.listen(port, () => {
+    console.log("Server running on port " + port);
 });
