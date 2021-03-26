@@ -28,7 +28,7 @@ app.get('/test', (req, res) => {
 app.post('/post', (req, res) => {
     console.log(req.body);
    // aux =req.body.prop1
-    res.send(`Received:  ${aux},  ${req.body.prop2})´;
+res.send(`Received:  ${aux},  ${req.body.prop2}`);
 })
  // Testing for axios APIS
 app.get('/rick',(req,res) => {
